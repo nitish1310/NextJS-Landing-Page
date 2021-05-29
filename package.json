@@ -1,14 +1,19 @@
 {
   "name": "landing-page",
   "version": "0.0.1",
+  "main": "function.js",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export",
-    "postbuild": "next-sitemap"
+    "postbuild": "next-sitemap",
+    "deploy": "next build && cross-env NODE_ENV=production firebase deploy --only functions,hosting"
   },
   "dependencies": {
+    "cross-env": "^7.0.3",
     "dotenv": "^8.2.0",
+    "firebase-admin": "^9.9.0",
+    "firebase-functions": "^3.14.1",
     "framer-motion": "^2.7.5",
     "globby": "^11.0.0",
     "isomorphic-unfetch": "^3.0.0",
