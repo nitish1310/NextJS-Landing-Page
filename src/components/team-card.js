@@ -6,7 +6,7 @@ export default function TeamCard({ src, altText, title, designation, social }) {
   return (
     <Box sx={styles.card}>
       <Image src={src} alt={altText} sx={styles.memberThumb} />
-      <Box sx={styleMedia.infoWrapper}>
+      <Box sx={styles.infoWrapper}>
         <Heading className="info__name" sx={styles.infoWrapper.name}>
           {title}
         </Heading>
